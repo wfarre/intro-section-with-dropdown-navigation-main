@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <!-- googlefonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="styles/styles.css">
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="nav">
+    <div class="logo">
+      <img src="./images/logo.svg" alt="snap logo">
+    </div>
+    <div class="navbar">
+      <ul class="navbar-nav">
+        <div class="dropdown">
+        <li class="narbar-nav__item">
+          <a class="dropdown-btn" href="#" >
+            Features
+            <img class="icon" src="./images/icon-arrow-up.svg" alt="">
+          </a>
+        </li>
+        <ul class="dropdown-content">
+          <li class="dropdown-content__item">
+            <a href="#" class="dropdown-content__item__link">
+              <img class="icon" src="./images/icon-todo.svg" alt="">
+              Todo list
+            </a>
+          </li>
+          <li class="dropdown-content__item">
+            <a href="#" class="dropdown-content__item__link" onclick="{(e)=>{console.log(e)}}">
+              <img class="icon" src="./images/icon-calendar.svg" alt="">
+              Calendar
+            </a>
+          </li>
+          <li class="dropdown-content__item">
+            <a href="#" class="dropdown-content__item__link">
+              <img class="icon" src="./images/icon-reminders.svg" alt="">
+              Reminder
+            </a>
+          </li>
+          <li class="dropdown-content__item">
+            <a href="#" class="dropdown-content__item__link">
+              <img class="icon" src="./images/icon-planning.svg" alt="">
+              Planning
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="dropdown">
+        <li class="narbar-nav__item">
+          <a class="dropdown-btn" href="#">
+            Company
+            <img class="icon" src="./images/icon-arrow-up.svg" alt="">
+          </a>
+        </li>
+        <ul class="dropdown-content">
+          <li class="dropdown-content__item">
+            <a href="#" class="dropdown-content__item__link">
+              History
+            </a>
+          </li>
+          <li class="dropdown-content__item">
+            <a href="#" class="dropdown-content__item__link">
+              Our team
+            </a>
+          </li>
+          <li class="dropdown-content__item">
+            <a href="#" class="dropdown-content__item__link">
+              Blog
+            </a>
+          </li>
+        </ul>
+      </div>
+
+        <li class="narbar-nav__item"><a href="#">Careers</a></li>
+        <li class="narbar-nav__item"><a href="#">About</a></li>
+      </ul>
+
+    </div>
+    <div class="login">
+      <ul class="login-menu">
+        <li class="login-menu__item">
+          <button class="btn btn--login">
+            Login
+          </button>
+        </li>
+        <li class="login-menu__item">
+          <button class="btn btn btn--register">
+            Register
+          </button>
+        </li>
+
+      </ul>
+
+    </div>
+  </nav>
+
+
+  <header>
+    <div class="container container--header">
+
+   
+    <div class="container container--vertical">
+      <h1 class="main-title">
+        Make remote work
+      </h1>
+      <p class="description">
+        Get your team in sync, no matter your location. Streamline processes,
+        create team rituals, and watch productivity soar.
+      </p>
+      <button class="btn btn--more">
+        Learn more
+      </button>
+      <div class="container container--logo">
+        <div class="image-wrapper image-wrapper--logo">
+          <img src="./images/client-databiz.svg" alt="databiz logo">
+        </div>
+        <div class="image-wrapper image-wrapper--logo">
+          <img src="./images/client-audiophile.svg" alt="audiphile logo">
+        </div>
+        <div class="image-wrapper image-wrapper--logo">
+          <img src="./images/client-meet.svg" alt="meet logo">
+        </div>
+        <div class="image-wrapper image-wrapper--logo">
+          <img src="./images/client-maker.svg" alt="maker logo">
+        </div>
+      </div>
+    </div>
+
+    <div class="container container--image">
+      <div class="image-wrapper">
+        <img src="./images/image-hero-desktop.png" alt="">
+      </div>
+    </div>
+  </div>
+  </header>
+
+
+
+
+
+
+
+
+
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </footer>
+
+
+  <script src="index.js"></script>
+</body>
+
+</html>
