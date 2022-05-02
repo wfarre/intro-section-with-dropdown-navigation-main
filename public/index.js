@@ -60,3 +60,20 @@ function menuExpanding(menu){
 function menuClosing(menu){
     menu.classList.remove("expanded");
 }
+
+
+const openMenuBtn = document.querySelector(".menu-btn-wrapper");
+
+openMenuBtn.addEventListener("click", () =>{
+    const menuIcon = document.querySelector(".open-wrapper");
+    const closeIcon = document.querySelector(".close-wrapper");
+    const menu = document.querySelector(".nav-container");
+
+    menuIcon.classList.toggle("hide");
+    closeIcon.classList.toggle("hide");
+    menu.style.display = "flex";
+    
+
+    // menuIcon.style.display = "none";
+    // closeIcon.style.display = "block";
+} )

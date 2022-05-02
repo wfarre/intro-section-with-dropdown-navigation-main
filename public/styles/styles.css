@@ -10,8 +10,8 @@ body {
 }
 
 .nav {
-  padding: 0 3%;
-  margin-top: 3vh;
+  position: relative;
+  padding: 3% 3%;
   display: flex;
   justify-content: flex-start;
   width: 94%;
@@ -22,14 +22,58 @@ body {
 .nav .logo {
   height: 20px;
 }
+.nav .nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+}
+@media all and (max-width: 800px) {
+  .nav .nav-container {
+    z-index: 1;
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    row-gap: 25px;
+    width: 240px;
+    height: 100vh;
+    padding-top: 60px;
+    padding-left: 25px;
+    background: white;
+  }
+}
+.nav .menu-btn-wrapper {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  display: none;
+  z-index: 999;
+}
+.nav .menu-btn-wrapper:hover {
+  cursor: pointer;
+}
+@media all and (max-width: 800px) {
+  .nav .menu-btn-wrapper {
+    display: block;
+  }
+}
 .nav .navbar-nav {
-  display: inline-flex;
+  display: flex;
   list-style-type: none;
   margin: 0;
   column-gap: 30px;
   padding: 0;
   width: 30vw;
   justify-content: space-between;
+}
+@media all and (max-width: 800px) {
+  .nav .navbar-nav {
+    flex-direction: column;
+    row-gap: 18px;
+  }
 }
 .nav .navbar-nav a {
   text-decoration: none;
@@ -39,8 +83,10 @@ body {
   display: inline;
   font-weight: 500;
 }
-.nav .login {
-  margin-left: auto;
+@media all and (max-width: 800px) {
+  .nav .login {
+    width: calc(100% - 26px);
+  }
 }
 .nav .login-menu {
   margin: 0;
@@ -50,6 +96,16 @@ body {
   padding: 0;
   justify-content: space-between;
   column-gap: 40px;
+}
+@media all and (max-width: 800px) {
+  .nav .login-menu {
+    flex-direction: column;
+    row-gap: 18px;
+    width: 100%;
+  }
+  .nav .login-menu__item {
+    width: 100%;
+  }
 }
 
 .btn {
@@ -65,11 +121,21 @@ body {
   border: none;
   color: hsl(0deg, 0%, 41%);
 }
+@media all and (max-width: 800px) {
+  .btn--login {
+    width: 100%;
+  }
+}
 .btn--register {
   border-color: hsl(0deg, 0%, 41%);
   color: hsl(0deg, 0%, 41%);
   width: 105px;
   height: 40px;
+}
+@media all and (max-width: 800px) {
+  .btn--register {
+    width: 100%;
+  }
 }
 .btn--more {
   background-color: hsl(0deg, 0%, 8%);
@@ -144,8 +210,9 @@ header {
 }
 header .main-title {
   font-size: 69px;
-  padding-top: 90px;
+  font-weight: 700;
   margin: 0;
+  margin-top: 12vh;
 }
 header .description {
   margin: 0;
@@ -165,7 +232,14 @@ header .description {
   position: relative;
 }
 
+.dropdown-btn {
+  display: inline-flex;
+  justify-content: space-around;
+  column-gap: 8px;
+}
 .dropdown-btn .icon {
+  display: inline;
+  align-self: center;
   transform: rotateX(180deg);
   transition: transform 600ms;
 }
@@ -195,8 +269,17 @@ header .description {
 .expanded .dropdown-content {
   display: flex;
 }
+@media all and (max-width: 800px) {
+  .expanded .dropdown-content {
+    position: relative;
+  }
+}
 .expanded .dropdown-btn .icon {
   transform: rotateX(0deg);
+}
+
+.hide {
+  display: none;
 }
 
 .attribution {
