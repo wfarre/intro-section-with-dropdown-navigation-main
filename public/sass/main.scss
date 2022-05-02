@@ -139,18 +139,21 @@ body {
     }
 
     &--image {
+        position: relative;
         width: 60%;
+        display: flex;
         // background-color: red;
 
         .image-wrapper {
-            position: relative;
+           
+
+            display: flex;
+            justify-content: flex-end;
             width: 100%;
 
             img {
-                position: absolute;
-                top: 0;
-                right: 0;
-                width: fit-content;
+                position: relative;
+                width: max-content;
                 height: 100%;
                 object-fit:contain;
             }
@@ -262,3 +265,14 @@ header {
         }
     }
 }
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }

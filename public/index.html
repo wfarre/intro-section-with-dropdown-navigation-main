@@ -16,167 +16,186 @@
   <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <link rel="stylesheet" href="styles/styles.css">
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
+  <link rel="stylesheet" href="styles/styles.css">z
 </head>
 
 <body>
 
   <nav class="nav">
+
     <div class="logo">
       <img src="./images/logo.svg" alt="snap logo">
     </div>
+
     <div class="navbar">
-      <ul class="navbar-nav">
+
+      <div class="navbar-nav">
         <div class="dropdown">
-        <li class="narbar-nav__item">
-          <a class="dropdown-btn" href="#" >
-            Features
-            <img class="icon" src="./images/icon-arrow-up.svg" alt="">
+
+          <div class="narbar-nav__item">
+            <a class="dropdown-btn" href="#">
+              Features
+              <img class="icon" src="./images/icon-arrow-up.svg" alt="">
+            </a>
+          </div>
+
+          <div class="dropdown-content">
+
+            <div class="dropdown-content__item">
+              <a href="#" class="dropdown-content__item__link">
+                <img class="icon" src="./images/icon-todo.svg" alt="">
+                Todo list
+              </a>
+            </div>
+
+            <div class="dropdown-content__item">
+              <a href="#" class="dropdown-content__item__link" onclick="{(e)=>{console.log(e)}}">
+                <img class="icon" src="./images/icon-calendar.svg" alt="">
+                Calendar
+              </a>
+            </div>
+
+            <div class="dropdown-content__item">
+              <a href="#" class="dropdown-content__item__link">
+                <img class="icon" src="./images/icon-reminders.svg" alt="">
+                Reminder
+              </a>
+            </div>
+
+            <div class="dropdown-content__item">
+              <a href="#" class="dropdown-content__item__link">
+                <img class="icon" src="./images/icon-planning.svg" alt="">
+                Planning
+              </a>
+            </div>
+
+          </div> <!-- .dropdown-content -->
+
+        </div><!-- .dropdown -->
+
+        <div class="dropdown">
+
+          <div class="narbar-nav__item">
+            <a class="dropdown-btn" href="#">
+              Company
+              <img class="icon" src="./images/icon-arrow-up.svg" alt="">
+            </a>
+          </div>
+
+          <div class="dropdown-content">
+
+            <div class="dropdown-content__item">
+              <a href="#" class="dropdown-content__item__link">
+                History
+              </a>
+            </div>
+
+            <div class="dropdown-content__item">
+              <a href="#" class="dropdown-content__item__link">
+                Our team
+              </a>
+            </div>
+
+            <div class="dropdown-content__item">
+              <a href="#" class="dropdown-content__item__link">
+                Blog
+              </a>
+            </div>
+
+          </div> <!-- .dropdown-content -->
+
+        </div><!-- .dropdown -->
+
+        <div class="narbar-nav__item">
+          <a href="#">
+            Careers
           </a>
-        </li>
-        <ul class="dropdown-content">
-          <li class="dropdown-content__item">
-            <a href="#" class="dropdown-content__item__link">
-              <img class="icon" src="./images/icon-todo.svg" alt="">
-              Todo list
-            </a>
-          </li>
-          <li class="dropdown-content__item">
-            <a href="#" class="dropdown-content__item__link" onclick="{(e)=>{console.log(e)}}">
-              <img class="icon" src="./images/icon-calendar.svg" alt="">
-              Calendar
-            </a>
-          </li>
-          <li class="dropdown-content__item">
-            <a href="#" class="dropdown-content__item__link">
-              <img class="icon" src="./images/icon-reminders.svg" alt="">
-              Reminder
-            </a>
-          </li>
-          <li class="dropdown-content__item">
-            <a href="#" class="dropdown-content__item__link">
-              <img class="icon" src="./images/icon-planning.svg" alt="">
-              Planning
-            </a>
-          </li>
-        </ul>
+        </div>
+
+        <div class="narbar-nav__item">
+          <a href="#">
+            About
+          </a>
+        </div>
+
+      </div><!-- .navbar-nav -->
+
       </div>
 
-      <div class="dropdown">
-        <li class="narbar-nav__item">
-          <a class="dropdown-btn" href="#">
-            Company
-            <img class="icon" src="./images/icon-arrow-up.svg" alt="">
-          </a>
-        </li>
-        <ul class="dropdown-content">
-          <li class="dropdown-content__item">
-            <a href="#" class="dropdown-content__item__link">
-              History
-            </a>
-          </li>
-          <li class="dropdown-content__item">
-            <a href="#" class="dropdown-content__item__link">
-              Our team
-            </a>
-          </li>
-          <li class="dropdown-content__item">
-            <a href="#" class="dropdown-content__item__link">
-              Blog
-            </a>
-          </li>
-        </ul>
-      </div>
+      <div class="login">
 
-        <li class="narbar-nav__item"><a href="#">Careers</a></li>
-        <li class="narbar-nav__item"><a href="#">About</a></li>
-      </ul>
+        <div class="login-menu">
 
-    </div>
-    <div class="login">
-      <ul class="login-menu">
-        <li class="login-menu__item">
-          <button class="btn btn--login">
-            Login
-          </button>
-        </li>
-        <li class="login-menu__item">
-          <button class="btn btn btn--register">
-            Register
-          </button>
-        </li>
+          <div class="login-menu__item">
+            <button class="btn btn--login">
+              Login
+            </button>
+          </div>
 
-      </ul>
+          <div class="login-menu__item">
+            <button class="btn btn btn--register">
+              Register
+            </button>
+          </div>
 
-    </div>
+        </div><!-- .login-menu -->
+
+      </div><!-- .login -->
   </nav>
-
 
   <header>
     <div class="container container--header">
 
-   
-    <div class="container container--vertical">
-      <h1 class="main-title">
-        Make remote work
-      </h1>
-      <p class="description">
-        Get your team in sync, no matter your location. Streamline processes,
-        create team rituals, and watch productivity soar.
-      </p>
-      <button class="btn btn--more">
-        Learn more
-      </button>
-      <div class="container container--logo">
-        <div class="image-wrapper image-wrapper--logo">
-          <img src="./images/client-databiz.svg" alt="databiz logo">
-        </div>
-        <div class="image-wrapper image-wrapper--logo">
-          <img src="./images/client-audiophile.svg" alt="audiphile logo">
-        </div>
-        <div class="image-wrapper image-wrapper--logo">
-          <img src="./images/client-meet.svg" alt="meet logo">
-        </div>
-        <div class="image-wrapper image-wrapper--logo">
-          <img src="./images/client-maker.svg" alt="maker logo">
-        </div>
-      </div>
-    </div>
+      <div class="container container--vertical">
 
-    <div class="container container--image">
-      <div class="image-wrapper">
-        <img src="./images/image-hero-desktop.png" alt="">
+        <h1 class="main-title">
+          Make remote work
+        </h1>
+
+        <p class="description">
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+        </p>
+
+        <button class="btn btn--more">
+          Learn more
+        </button>
+
+        <div class="container container--logo">
+          <div class="image-wrapper image-wrapper--logo">
+            <img src="./images/client-databiz.svg" alt="databiz logo">
+          </div>
+          <div class="image-wrapper image-wrapper--logo">
+            <img src="./images/client-audiophile.svg" alt="audiphile logo">
+          </div>
+          <div class="image-wrapper image-wrapper--logo">
+            <img src="./images/client-meet.svg" alt="meet logo">
+          </div>
+          <div class="image-wrapper image-wrapper--logo">
+            <img src="./images/client-maker.svg" alt="maker logo">
+          </div>
+        </div> <!-- .container -->
+
+      </div><!-- .container -->
+
+      <div class="container container--image">
+
+        <div class="image-wrapper">
+          <img src="./images/image-hero-desktop.png" alt="">
+        </div>
+
       </div>
-    </div>
-  </div>
+    </div><!-- .container -->
+
   </header>
-
-
-
-
-
-
-
-
-
 
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Farré William</a>.
   </footer>
 
-
   <script src="index.js"></script>
+
 </body>
 
 </html>

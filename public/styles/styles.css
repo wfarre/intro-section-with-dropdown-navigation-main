@@ -102,17 +102,18 @@ body {
   width: 40%;
 }
 .container--image {
+  position: relative;
   width: 60%;
+  display: flex;
 }
 .container--image .image-wrapper {
-  position: relative;
+  display: flex;
+  justify-content: flex-end;
   width: 100%;
 }
 .container--image .image-wrapper img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: fit-content;
+  position: relative;
+  width: max-content;
   height: 100%;
   object-fit: contain;
 }
@@ -196,6 +197,15 @@ header .description {
 }
 .expanded .dropdown-btn .icon {
   transform: rotateX(0deg);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
 }
 
 /*# sourceMappingURL=styles.css.map */
