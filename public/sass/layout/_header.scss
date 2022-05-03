@@ -1,0 +1,35 @@
+.header {
+    height: 75vh;
+    margin: 0 9% 0 12%;
+
+    @include mobile-only() {
+        margin: 0;
+        height: 700px;
+    }
+
+    .main-title {
+        font-size: 69px;
+        font-weight: 700;
+        margin: 0;
+        margin-top: 12vh;
+
+        @include mobile-only() {
+            font-size: 32px;
+            margin-top: 35px;
+        }
+    }
+
+    .description {
+        margin: 0;
+        font-size: 18px;
+        color: $txt-secondary-color;
+        line-height: 1.5;
+
+        @include mobile-only() {
+            font-size: 16px;
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+    }
+}
+

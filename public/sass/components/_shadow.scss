@@ -1,0 +1,25 @@
+
+
+.shadow {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0;
+    animation: shadow-appearance 500ms ease-in-out forwards;
+    
+}
+
+@keyframes shadow-appearance {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 0.3;
+    }
+    
+}

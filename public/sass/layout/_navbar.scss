@@ -1,0 +1,132 @@
+.nav {
+    position: relative;
+
+
+    display: flex;
+    justify-content: flex-start;
+    width: 94%;
+    padding: 3% 3%;
+
+    align-items: center;
+    column-gap: 65px;
+    font-size: 16px;
+
+    @include mobile-only() {
+        margin-bottom: 25px;
+    }
+
+
+
+    .logo {
+        height: 20px;
+    }
+
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        width: 100%;
+
+        @include mobile-only() {
+            display: none;
+            position: absolute;
+            flex-direction: column;
+            justify-content: flex-start;
+            width: 240px;
+            height: 100vh;
+            padding-top: 60px;
+            padding-left: 25px;
+            top: 0;
+            right: 0;
+            row-gap: 25px;
+            background: white;
+            z-index: 1;
+            transform: scaleX(0);
+            transform-origin: 100% 50%;
+            animation: open-menu 500ms forwards;
+            }
+
+    }
+
+    .menu-btn-wrapper {
+        display: none;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: 999;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        @include mobile-only() {
+            display: block;
+        }
+    }
+
+    .navbar {
+        &-nav {
+            display: flex;
+            justify-content: space-between;
+            width: 30vw;
+            margin: 0;
+            padding: 0;
+            column-gap: 30px;
+
+            @include mobile-only() {
+                flex-direction: column;
+                row-gap: 18px;
+            }
+
+            a {
+                text-decoration: none;
+                color: $txt-secondary-color;
+            }
+
+            &__item {
+                display: inline;
+                font-weight: 500;
+            }
+        }
+
+
+
+    }
+
+    .login {
+
+        @include mobile-only() {
+            width: calc(100% - 26px);
+        }
+
+        &-menu {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            margin: 0;
+            padding: 0;
+            column-gap: 40px;
+
+            @include mobile-only() {
+                flex-direction: column;
+                row-gap: 18px;
+                width: 100%;
+
+                &__item {
+                    width: 100%;
+                }
+            }
+
+        }
+    }
+}
+
+@keyframes open-menu{
+    0%{
+        transform: scaleX(0);
+    }
+
+    100%{
+        transform: scaleX(1);
+    }
+}

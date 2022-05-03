@@ -1,0 +1,61 @@
+.btn {
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 15px;
+    background-color: white;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &--login {
+        border: none;
+        color: $txt-secondary-color;
+
+        @include mobile-only() {
+            width: 100%;
+        }
+
+    }
+
+    &--register {
+        width: 105px;
+        height: 40px;
+        border-color: $txt-secondary-color;
+        color: $txt-secondary-color;
+
+        @include mobile-only() {
+            width: 100%;
+        }
+    }
+
+    &--more {
+        width: 170px;
+        height: 55px;
+        padding: 0;
+        font-size: 18px;
+        background-color: $txt-primary-color;
+        color: white;
+        transition: all 500ms;
+
+        &:hover {
+            background-color: white;
+            color: $txt-primary-color;
+        }
+    }
+}
+
+
+.dropdown-btn {
+    display: inline-flex;
+    justify-content: space-around;
+    column-gap: 8px;
+
+    .icon {
+        display: inline;
+        align-self: center;
+        transform: rotateX(180deg);
+        transition: transform 600ms;
+    }
+}
+
