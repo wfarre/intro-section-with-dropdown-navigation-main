@@ -36,6 +36,12 @@ body {
     column-gap: 65px;
     font-size: 16px;
 
+    @include mobile-only(){
+        margin-bottom: 25px;
+    }
+
+
+
     .logo {
         height: 20px;
     }
@@ -204,36 +210,76 @@ body {
     justify-content: space-between;
     column-gap: 50px;
     row-gap: 50px;
+    @include mobile-only(){
+        row-gap: 0;
+    }
 
     &--header {
         width: 100%;
         column-gap: 150px;
+        @include mobile-only(){
+            flex-direction: column-reverse;
+            margin-top: 25px;
+        }
     }
 
     &--vertical {
         flex-direction: column;
         justify-content: flex-start;
         width: 40%;
+        @include mobile-only(){
+            width: 90%;
+            height: 320px;
+            padding: 0 5%;
+            text-align: center;
+        }
     }
 
     &--image {
         position: relative;
         width: 60%;
-        display: flex;
+        // display: flex;
+
         // background-color: red;
+        @include mobile-only(){
+            width: 100%;
+        }
 
         .image-wrapper {
-
-
-            display: flex;
-            justify-content: flex-end;
+            position: relative;
+            // display: flex;
+            // justify-content: flex-end;
             width: 100%;
+            // height: 100%;
+            @include mobile-only(){
+                // justify-content: center;
+                // align-items: baseline;
+                width: 100%;
+                height: 300px; 
+                .image-desktop{
+                    display: none;
+                }
+            }
+
+            .image-mobile{
+                display: none;
+                @include mobile-only(){
+                    display: block;
+                }
+            }
 
             img {
-                position: relative;
+                position: absolute;
+                top: 0;
+                left: 0;
                 width: max-content;
                 height: 100%;
                 object-fit: contain;
+                @include mobile-only(){
+                    width: 100%;
+                }
+
+                
             }
         }
     }
@@ -243,6 +289,9 @@ body {
         height: fit-content;
         justify-content: flex-start;
         column-gap: 40px;
+        @include mobile-only(){
+            margin-top: 45px;
+        }
 
         .image-wrapper {
             position: relative;
@@ -270,6 +319,9 @@ header {
     margin: 0 9% 0 12%;
     margin-top: 6vh;
     // width: 79%;
+    @include mobile-only(){
+        margin: 0;
+    }
 
     .main-title {
         font-size: 69px;
@@ -278,6 +330,10 @@ header {
         // padding-top: 90px;
         margin: 0;
         margin-top: 12vh;
+        @include mobile-only(){
+            font-size: 32px;
+            margin-top: 35px;
+        }
     }
 
     .description {
@@ -286,6 +342,11 @@ header {
         font-size: 18px;
         color: $txt-secondary-color;
         line-height: 1.5;
+        @include mobile-only(){
+            font-size: 16px;
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
     }
 }
 
@@ -315,7 +376,7 @@ header {
 
 
 .dropdown-content {
-    display: none;
+    // display: none;
     position: absolute;
     top: 20px;
     left: 0;
@@ -330,6 +391,15 @@ header {
     background-color: white;
     box-shadow: 10px 5px 16px -10px black;
     border-radius: 15px;
+    transition: transform 500ms;
+    transform: scaleY(0);
+    transform-origin: top;
+    @include mobile-only(){
+        padding: 0;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        box-shadow: none;
+    }
 
     &__item {
         font-size: 14px;
@@ -345,6 +415,8 @@ header {
 .expanded {
     .dropdown-content {
         display: flex;
+        transform: scaleY(1);
+
 
         @include mobile-only() {
             position: relative;
@@ -370,4 +442,15 @@ header {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+.shadow{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.2;
 }

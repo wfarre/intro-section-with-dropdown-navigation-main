@@ -63,17 +63,34 @@ function menuClosing(menu){
 
 
 const openMenuBtn = document.querySelector(".menu-btn-wrapper");
+const closeIcon = document.querySelector(".close-wrapper");
+const menuIcon = document.querySelector(".open-wrapper");
 
-openMenuBtn.addEventListener("click", () =>{
-    const menuIcon = document.querySelector(".open-wrapper");
-    const closeIcon = document.querySelector(".close-wrapper");
+
+
+menuIcon.addEventListener("click", () =>{
     const menu = document.querySelector(".nav-container");
+    const shadow = document.querySelector(".shadow");
 
     menuIcon.classList.toggle("hide");
     closeIcon.classList.toggle("hide");
     menu.style.display = "flex";
+    shadow.style.display = "block"
     
 
     // menuIcon.style.display = "none";
     // closeIcon.style.display = "block";
-} )
+});
+
+closeIcon.addEventListener("click", ()=> {
+    const menu = document.querySelector(".nav-container");
+    const shadow = document.querySelector(".shadow");
+
+
+    menuIcon.classList.toggle("hide");
+    closeIcon.classList.toggle("hide");
+    menu.style.display = "none";
+    shadow.style.display = "none"
+
+})
+

@@ -19,6 +19,11 @@ body {
   column-gap: 65px;
   font-size: 16px;
 }
+@media all and (max-width: 800px) {
+  .nav {
+    margin-bottom: 25px;
+  }
+}
 .nav .logo {
   height: 20px;
 }
@@ -158,36 +163,87 @@ body {
   column-gap: 50px;
   row-gap: 50px;
 }
+@media all and (max-width: 800px) {
+  .container {
+    row-gap: 0;
+  }
+}
 .container--header {
   width: 100%;
   column-gap: 150px;
+}
+@media all and (max-width: 800px) {
+  .container--header {
+    flex-direction: column-reverse;
+    margin-top: 25px;
+  }
 }
 .container--vertical {
   flex-direction: column;
   justify-content: flex-start;
   width: 40%;
 }
+@media all and (max-width: 800px) {
+  .container--vertical {
+    width: 90%;
+    height: 320px;
+    padding: 0 5%;
+    text-align: center;
+  }
+}
 .container--image {
   position: relative;
   width: 60%;
-  display: flex;
+}
+@media all and (max-width: 800px) {
+  .container--image {
+    width: 100%;
+  }
 }
 .container--image .image-wrapper {
-  display: flex;
-  justify-content: flex-end;
+  position: relative;
   width: 100%;
 }
+@media all and (max-width: 800px) {
+  .container--image .image-wrapper {
+    width: 100%;
+    height: 300px;
+  }
+  .container--image .image-wrapper .image-desktop {
+    display: none;
+  }
+}
+.container--image .image-wrapper .image-mobile {
+  display: none;
+}
+@media all and (max-width: 800px) {
+  .container--image .image-wrapper .image-mobile {
+    display: block;
+  }
+}
 .container--image .image-wrapper img {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: max-content;
   height: 100%;
   object-fit: contain;
+}
+@media all and (max-width: 800px) {
+  .container--image .image-wrapper img {
+    width: 100%;
+  }
 }
 .container--logo {
   margin-top: auto;
   height: fit-content;
   justify-content: flex-start;
   column-gap: 40px;
+}
+@media all and (max-width: 800px) {
+  .container--logo {
+    margin-top: 45px;
+  }
 }
 .container--logo .image-wrapper {
   position: relative;
@@ -208,17 +264,35 @@ header {
   margin: 0 9% 0 12%;
   margin-top: 6vh;
 }
+@media all and (max-width: 800px) {
+  header {
+    margin: 0;
+  }
+}
 header .main-title {
   font-size: 69px;
   font-weight: 700;
   margin: 0;
   margin-top: 12vh;
 }
+@media all and (max-width: 800px) {
+  header .main-title {
+    font-size: 32px;
+    margin-top: 35px;
+  }
+}
 header .description {
   margin: 0;
   font-size: 18px;
   color: hsl(0deg, 0%, 41%);
   line-height: 1.5;
+}
+@media all and (max-width: 800px) {
+  header .description {
+    font-size: 16px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
 }
 
 .attribution {
@@ -245,7 +319,6 @@ header .description {
 }
 
 .dropdown-content {
-  display: none;
   position: absolute;
   top: 20px;
   left: 0;
@@ -258,6 +331,17 @@ header .description {
   background-color: white;
   box-shadow: 10px 5px 16px -10px black;
   border-radius: 15px;
+  transition: transform 500ms;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+@media all and (max-width: 800px) {
+  .dropdown-content {
+    padding: 0;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    box-shadow: none;
+  }
 }
 .dropdown-content__item {
   font-size: 14px;
@@ -268,6 +352,7 @@ header .description {
 
 .expanded .dropdown-content {
   display: flex;
+  transform: scaleY(1);
 }
 @media all and (max-width: 800px) {
   .expanded .dropdown-content {
@@ -289,6 +374,17 @@ header .description {
 
 .attribution a {
   color: hsl(228deg, 45%, 44%);
+}
+
+.shadow {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.2;
 }
 
 /*# sourceMappingURL=styles.css.map */
